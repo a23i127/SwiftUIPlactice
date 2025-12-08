@@ -5,6 +5,17 @@ import SwiftUI
 struct PageView: View {
     let title: String
     var body: some View {
+        if title == "Home" {
+            HomeView()
+        } else {
+            DefaultPageView(title: title)
+        }
+    }
+}
+
+struct DefaultPageView: View {
+    let title: String
+    var body: some View {
         ZStack {
             Color(UIColor.systemBackground)
                 .ignoresSafeArea()
