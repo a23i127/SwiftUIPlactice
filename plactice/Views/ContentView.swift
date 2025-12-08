@@ -14,7 +14,8 @@ struct ContentView: View {
     private let tabs: [TabItem] = [
         TabItem(title: "Home", systemImage: "house.fill"),
         TabItem(title: "Search", systemImage: "magnifyingglass"),
-        TabItem(title: "Profile", systemImage: "person.circle")
+        TabItem(title: "Profile", systemImage: "person.circle"),
+        TabItem(title: "Test", systemImage: "testtube.2")
     ]
 
     var body: some View {
@@ -24,6 +25,8 @@ struct ContentView: View {
                     Group {
                         if tab.title == "Profile" {
                             ProfileView()
+                        } else if tab.title == "Test" {
+                            TestView()
                         } else {
                             PageView(title: tab.title)
                         }
