@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:plactice}/backend/backend",
+            "name": "Debug vapor-backend (backend/backend)",
+            "target": "vapor-backend",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug vapor-backend (backend/backend)"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:plactice}/backend/backend",
+            "name": "Release vapor-backend (backend/backend)",
+            "target": "vapor-backend",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release vapor-backend (backend/backend)"
+        }
+    ]
+}

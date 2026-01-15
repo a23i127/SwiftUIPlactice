@@ -15,7 +15,7 @@ struct ContentView: View {
         TabItem(title: "Home", systemImage: "house.fill"),
         TabItem(title: "Search", systemImage: "magnifyingglass"),
         TabItem(title: "Profile", systemImage: "person.circle"),
-        TabItem(title: "Test", systemImage: "testtube.2")
+        TabItem(title: "Test", systemImage: "testtube.2"),
     ]
 
     var body: some View {
@@ -23,7 +23,9 @@ struct ContentView: View {
             TabView(selection: $selection) {
                 ForEach(Array(tabs.enumerated()), id: \.offset) { index, tab in
                     Group {
-                        if tab.title == "Profile" {
+                        if tab.title == "Home" {
+                            HomeView()
+                        } else if tab.title == "Profile" {
                             ProfileView()
                         } else if tab.title == "Test" {
                             TestView()
